@@ -7,10 +7,10 @@ const database = 'flyon'
 const password = 'diogo123'
 const port = '5432'*/
 //-------------Heroku-----------
-const user = 'xfeegyrwnuiiad'
-const host = 'ec2-54-83-21-198.compute-1.amazonaws.com'
-const database = 'div8qsc4fu6cp'
-const password = '7eff37c8cff61680ff13a6378f20f292f1f10a1856fb693b2b0eec4e18625a64'
+const user = 'yojbmfgfkkchng'
+const host = 'ec2-44-206-11-200.compute-1.amazonaws.com'
+const database = 'ddte6nouihhkba'
+const password = 'ba8b7ca4d475dcf5d2b83ad925cd7b8ff93cd7272aca66b909c37f41f7dc0b8b'
 const port = '5432'
 
 const pkg = require('sequelize')
