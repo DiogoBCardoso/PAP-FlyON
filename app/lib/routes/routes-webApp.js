@@ -261,9 +261,9 @@ return db
             const task2 = api.getHotels(proc[0])
             return Promise
                 .all([task1, task2])
-                .then(([voos, hoteis]) => {
+                .then(([voos, hoteis]) => {                   
                     if(voos.length == 0) throw Error('There are no flights with that criteria available')
-                    if(hoteis.lenght == 0) throw Error('There are no hotels with that criteria available')
+                    if(hoteis.length == 0) throw Error('There are no hotels with that criteria available')
                     resp.render('getoffers',{data: {"voos": voos , "hoteis": hoteis, "id":proc[0].id}})
                 })
                 .catch(next)
@@ -290,6 +290,7 @@ function HandlerCreateOffer(req, resp, next) {
     var destino = voo[3];
     var partida = voo[2];
     var chegada = voo[4];
+
     
 return db
         .createProposta(idproc, precovoo, tempoviagem, nomehotel, precohotel, morada, disthotel, precototal, datalimitereservavoo)

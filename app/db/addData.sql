@@ -2,7 +2,7 @@ insert into utilizadores(nome) values ('Rodrigo');
 insert into utilizadores(nome) values ('Antonio');
 insert into utilizadores(nome) values ('Didarrito');
 
-insert into processo(cidadeDestino, checkin, checkout, numadultos, radius, origem, partida) values ('PAR', '2022-09-10', '2021-01-11', 1, 10,'LIS', '2022-09-10');
+insert into processo(cidadeDestino, checkin, checkout, numadultos, radius, origem, partida) values ('PAR', '2022-09-10', '2021-09-11', 1, 10,'LIS', '2022-09-10');
 
 insert into proposta(idProcesso, precoVoo, tempoViagem, nomeHotel, precoHotel, morada, disthotel, precoTotal, datalimitereservavoo) values (1, 102.20, 'PT1H25M', 'Hotel do Santo', 150, 'Rua St.António, Lt.1', 2, 252.20 ,'2022-09-05');
 insert into proposta(idProcesso, precoVoo, tempoViagem, nomeHotel, precoHotel, morada, disthotel, precoTotal, datalimitereservavoo) values (1, 50, 'PT11H25M', 'Hotel da Pedra', 200, 'Rua Flintstones, Lt.9', 4, 250, '2022-09-05');

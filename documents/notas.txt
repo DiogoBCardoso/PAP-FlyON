@@ -2,9 +2,8 @@ link sites:
 https://www.geeksforgeeks.org/postgresql-psql-commands/
 https://www.npmjs.com/package/amadeus
 id.heroku.com
+https://stackoverflow.com/questions/26454425/failed-to-lookup-view-in-directory-with-express-handlebars
 
-TO-DO List:
-falta criar os creates
-fazer a parte da api, vista para mostrar
-criar a proposta infovoo
-deploy no heroku e mudar a db para a de lá
+aceder a app
+- para api: https://pap-flyon.herokuapp.com/flyon/api/
+- para a app: https://pap-flyon.herokuapp.com/flyon/
