@@ -1,1 +1,1 @@
-web: node ./App/index
+web: node ./app/index
