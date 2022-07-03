@@ -1,0 +1,65 @@
+<div class="div1">
+     <img class="logo" src="/PAPLogo.png">
+</div>
+<div class="contentor">
+    <table class="table table-striped table-light">
+        <tr>
+            <th>Id Proposta</th>
+            <th>Id Processo</th>
+            <th>Preço Voo</th>
+            <th>Tempo Viagem</th>
+            <th>Hotel</th>
+            <th>Preço Hotel</th>
+            <th>Morada</th>
+            <th>Dist Hotel</th>
+            <th>Preço Total</th>
+            <th>Data Limite Reserva Voo</th>
+        </tr>
+        {{#each data}}
+            <tr>
+                <td>
+                    <a href="/flyon/processo/{{idprocesso}}/proposta/{{id}}">{{id}}</a>
+                </td>
+                <td>
+                    <a href="/flyon/processo/{{idprocesso}}">{{idprocesso}}</a>
+                </td>
+                <td>
+                    {{precovoo}}€
+                </td>
+                <td>
+                    {{tempoviagem}}
+                </td>
+                <td>
+                    {{nomehotel}}
+                </td>
+                <td>
+                    {{precohotel}}€
+                </td>
+                <td>
+                    {{morada}}
+                </td>
+                <td>
+                    {{disthotel}}
+                </td>
+                <td>
+                    {{precototal}}€
+                </td>
+                <td>
+                    {{datalimitereservavoo}}
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+
+    <a href="/flyon/" class="btn botoes">Voltar para Menu</a>
+</div>
+<style>
+    .botoes
+    {
+        width: 800px;
+        height: 70px;
+        font-size: 50px;
+        line-height: 100%;
+        font-weight: 500;
+    }
+</style>

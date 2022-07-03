@@ -1,0 +1,68 @@
+<div class="div1">
+     <img class="logo" src="/PAPLogo.png">
+</div>
+<div class="contentor">
+    <table class="table table-striped table-light">
+        <tr>
+            <th>Id Processo</th>
+            <th>Origem</th>
+            <th>Destino</th>
+            <th>Num Adultos</th>
+            <th>Check In</th>
+            <th>Check Out</th>
+            <th>Dist ao Centro</th>      
+            <th>Partida</th>
+        </tr>
+        {{#each data}}
+            <tr>
+                <td>
+                    {{id}}
+                </td>
+                <td>
+                    {{origem}}
+                </td>
+                <td>
+                    {{cidadedestino}}
+                </td>
+                <td>
+                    {{numadultos}}
+                </td>
+                <td>
+                    {{checkin}}
+                </td>
+                <td>
+                    {{checkout}}
+                </td>
+                
+                <td>
+                    {{radius}} Km
+                </td>
+                <td>
+                    {{partida}}
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+
+    <a href="/flyon/processo" class="btn botoes">Todos os Processos</a>
+    <a href="/flyon/processo/{{data.0.id}}/proposta" class="btn botoes">Propostas do Processo {{data.0.id}}</a>
+    <a href="/flyon/" class="btn botoes">Voltar para Menu</a>
+    <a href="/flyon/processo/{{data.0.id}}/getoffers" class="btn botoes" style="background-color: #0dcaf0 !important;">Procurar Ofertas</a>
+    <a href="/flyon/processo/{{data.0.id}}/delete" class="btn botoes" id="apagar">Apagar Processo</a>
+</div>
+<style>
+    .botoes
+    {
+        width: 800px;
+        height: 70px;
+        font-size: 50px;
+        line-height: 100%;
+        font-weight: 500;
+    }
+
+    #apagar
+    {
+        background-color: red !important;
+    }
+</style>
+

@@ -1,0 +1,10 @@
+link sites:
+https://www.geeksforgeeks.org/postgresql-psql-commands/
+https://www.npmjs.com/package/amadeus
+id.heroku.com
+
+TO-DO List:
+falta criar os creates
+fazer a parte da api, vista para mostrar
+criar a proposta infovoo
+deploy no heroku e mudar a db para a de lá

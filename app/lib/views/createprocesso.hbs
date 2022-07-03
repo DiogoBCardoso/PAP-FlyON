@@ -1,0 +1,117 @@
+<div class="div1">
+     <img class="logo" src="/PAPLogo.png">
+</div>
+<div class="contentor">
+    <div style="width: 100vw;">
+        <form method="POST" action="/flyon/processo">
+            <div class="form-group row" style="justify-content: center">
+                <label id="ajuda">Para a escolha de origem e destino insira um código de cidade "IATA",<br>
+                para obter o código aceda ao link: <a href="https://www.iata.org/en/publications/directories/code-search/">IATA</a></label>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">Código origem: </label>
+                <div class="col-4">
+                    <input type="text" class="form-control" name="origem" required placeholder="Código da Cidade Origem">
+                </div>
+                <label class="col-2 col-form-label">Código destino: </label>
+                <div class="col-4">
+                    <input type="text" class="form-control" name="cidadedestino" required placeholder="Código da Cidade Destino">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">Check In: </label>
+                <div class="col-4">
+                    <input type="date" class="form-control" name="checkin" required placeholder="Data de Check In">
+                </div>
+                <label class="col-2 col-form-label">Check Out: </label>
+                <div class="col-4">
+                    <input type="date" class="form-control" name="checkout" required placeholder="Data de Check Out">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">Nº Adultos: </label>
+                <div class="col-4">
+                    <input type="number" class="form-control" name="numadultos" required placeholder="Número de adultos">
+                </div>
+                <label class="col-2 col-form-label">Distância a Centro:</label>
+                <div class="col-4">
+                    <input type="number" class="form-control" name="radius" required placeholder="Distância ao centro da cidade">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">Partida: </label>
+                <div class="col-4">
+                    <input type="date" class="form-control" name="partida" required placeholder="Data de Partida">
+                </div>
+            </div>
+            <div class="row" style="justify-content: center">
+                <button type="submit" class="btn btn-primary">Criar Novo Processo</button>
+            </div>
+        </form>
+        <div class="row" style="justify-content: center">
+            <a href="/flyon/processo" class="btn botoes" id="vproc">Voltar para Processos</a>
+        </div>
+        <div class="row" style="justify-content: center">
+            <a href="/flyon/" class="btn botoes">Voltar para Menu</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    #vproc
+    {
+        margin-bottom: initial;
+    }
+    .row
+    {
+        max-width: 80vw;
+        margin: auto;
+        margin-bottom: 15px;
+    }
+    label, span
+    {
+        color: white;
+        font-size: 17px !important;
+        text-align: center;
+        line-height: 39.5px;
+    }
+    input[type=radio]
+    {
+        max-width: 50px;
+    }
+    input
+    {
+        text-align: center;
+    }
+    .form-line-error input:not(#coupon-input), .form-line-error .form-validation-error
+    {
+
+        box-shadow: none !important;
+
+    }
+    span
+    {
+        margin-right: 25px;
+        margin-left: 25px;
+    }
+    button[type=submit]
+    {
+        width: 350px;
+        height: 60px;
+        font-size: 30px;
+        background-color: #4fbd68;
+        border-color: #4fbd68;
+    }
+    button[type=submit]:hover {
+        background-color: #4fbd68;
+    }
+    button[type=submit]:click {
+        background-color: #4fbd68;
+    }
+    .botoes
+    {
+        width: 350px !important;
+        height: 60px !important;
+        font-size: 30px !important;
+    }
+</style>

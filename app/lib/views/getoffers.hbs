@@ -1,0 +1,103 @@
+<div class="div1">
+     <img class="logo" src="/PAPLogo.png">
+</div>
+<div class="contentor">
+    <form method="POST" action="/flyon/processo/{{data.id}}/createOffer" style="display: flex;flex-direction: column;row-gap: 50px;align-items: center;">
+    <div class="listas">
+        <div class="titulos">
+            <h1>Ofertas Voos</h1>
+            <h3 style="margin-bottom: 20px;">A 1ª oferta é a mais barata e a 2ª é a mais rápida!</h3>
+        </div>
+        <div id="offers">
+            {{#each data.voos}}
+            <ul class="list-group">
+                <lh class="list-group-item" style="color: white; background-color: rgb(82, 82, 82)">Voo {{id}}</lh>
+                <li class="list-group-item">Duração: {{itineraries.0.duration}}</li>
+                <li class="list-group-item">Origem Voo : {{itineraries.0.segments.0.departure.iataCode}}</li>
+                <li class="list-group-item">Dia/Horas Partida Voo : {{itineraries.0.segments.0.departure.at}}</li>
+                <li class="list-group-item">Destino Voo : {{itineraries.0.segments.0.arrival.iataCode}}</li>
+                <li class="list-group-item">Dia/Horas Chegada Voo : {{itineraries.0.segments.0.arrival.at}}</li>
+                <li class="list-group-item">Companhia Voo : {{itineraries.0.segments.0.carrierCode}}</li>
+                <li class="list-group-item">Data Limite Reserva: {{lastTicketingDate}}</li>
+                <li class="list-group-item">Preço: {{price.grandTotal}}€</li>
+                <li class="list-group-item"><input type="radio" class="form-control" name="voo" value="{{itineraries.0.duration}},{{itineraries.0.segments.0.departure.iataCode}},{{itineraries.0.segments.0.departure.at}},{{itineraries.0.segments.0.arrival.iataCode}},{{itineraries.0.segments.0.arrival.at}},{{itineraries.0.segments.0.carrierCode}},{{lastTicketingDate}},{{price.grandTotal}}" required>
+                Selecionar este Voo</li>
+            </ul>
+            {{/each}}    
+        </div>
+    </div>
+
+    <div class="listas">
+        <div class="titulos">
+            <h1>Ofertas Hóteis</h1>
+            <h3 style="margin-bottom: 20px;">A 1ª oferta é a mais barata e a 2ª é a mais perto do centro da cidade!</h3>
+        </div>
+        <div id="offers">
+            {{#each data.hoteis}}
+            <ul class="list-group">
+                <lh class="list-group-item" style="color: white; background-color: rgb(82, 82, 82)">Hotel {{@index}}</lh>
+                <li class="list-group-item" class="nomehotel">Nome Hotel: {{hotel.name}}</li>
+                <li class="list-group-item" class="morada">Morada: {{hotel.address.lines}}, {{hotel.address.cityName}}</li>
+                <li class="list-group-item" class="disthotel">Distância ao centro: {{hotel.hotelDistance.distance}}Km</li>
+                <li class="list-group-item" class="precohotel">Preço: {{offers.0.price.total}}€</li>
+                <li class="list-group-item"><input type="radio" class="form-control" name="hotel" value="{{hotel.name}},{{hotel.address.lines}},{{hotel.address.cityName}},{{hotel.hotelDistance.distance}},{{offers.0.price.total}}" required>
+                Selecionar este Hotel</li>
+            </ul>
+            {{/each}}    
+        </div>
+    </div>
+    <div style="display: flex;flex-direction: column;">
+        <button type="submit" class="btn botoes" style="background-color: #4fbd68 !important;">Criar Nova Proposta</button>
+        <a href="/flyon/" class="btn botoes">Voltar para Menu</a>
+    </div>
+    
+    </form>
+    <!--<form method="POST" action="/flyon/createOffer" style="display: flex; flex-direction:column;">
+        <input type="text" class="form-control" name="precovoo" hidden>
+        <input type="text" class="form-control" name="tempoviagem" hidden>
+        <input type="text" class="form-control" name="nomehotel" hidden>
+        <input type="text" class="form-control" name="precohotel" hidden>
+        <input type="text" class="form-control" name="morada" hidden>
+        <input type="text" class="form-control" name="disthotel" hidden>
+        <input type="text" class="form-control" name="datalimitereservavoo" hidden>
+        <input type="text" class="form-control" name="companhia" hidden>
+        <input type="text" class="form-control" name="origem" hidden>
+        <input type="text" class="form-control" name="destino" hidden>
+        <input type="text" class="form-control" name="partida" hidden>
+        <input type="text" class="form-control" name="chegada" hidden>
+        <button type="submit" class="btn botoes" style="background-color: #4fbd68 !important;">Criar Nova Proposta</button>
+        <a href="/flyon/" class="btn botoes">Voltar para Menu</a>
+    </form>-->
+    
+</div>
+
+
+<style>
+    .botoes
+    {
+        width: 800px;
+        height: 70px;
+        font-size: 50px;
+        line-height: 100%;
+        font-weight: 500;
+    }
+    #offers
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        row-gap: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+    .titulos
+    {
+        text-align: center;
+        color: white;
+    }
+    .contentor
+    {
+        row-gap: 50px;
+    }
+</style>

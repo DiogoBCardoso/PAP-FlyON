@@ -1,0 +1,40 @@
+<div class="div1">
+     <img class="logo" src="/PAPLogo.png">
+</div>
+<div class="contentor">
+    <table class="table table-striped table-light">
+        <tr>
+            <th>Id Utilizador</th>
+            <th>Nome</th>
+        </tr>
+        {{#each data}}
+            <tr>
+                <td>
+                    {{id}}
+                </td>
+                <td>
+                    {{nome}}
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+
+    <a href="/flyon/utilizadores" class="btn botoes">Voltar para Utilizadores</a>
+    <a href="/flyon/" class="btn botoes">Voltar para Menu</a>
+    <a href="/flyon/utilizadores/{{data.0.id}}/delete" class="btn botoes" id="apagar">Apagar Utilizador</a>
+</div>
+<style>
+    .botoes
+    {
+        width: 800px;
+        height: 70px;
+        font-size: 50px;
+        line-height: 100%;
+        font-weight: 500;
+    }
+
+    #apagar
+    {
+        background-color: red !important;
+    }
+</style>

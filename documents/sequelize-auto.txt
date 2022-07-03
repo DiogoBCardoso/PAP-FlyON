@@ -1,0 +1,7 @@
+sequelize-auto -h localhost -d flyon -u postgres -x diogo123 -p 5432 -e postgres -o "./lib/models"  
+
+Tenho de atualizar a bd local para depois atualizar os modelos com este comando, que não funciona com o heroku 
+
+para se poder correr este comando tem que se ir a powershell como administrador,
+entrar na pasta da app, correr o comando Set-ExecutionPolicy RemoteSigned, depois correr o script no IDE
+e no fim correr o comando Set-ExecutionPolicy Restricted na powershell outravez

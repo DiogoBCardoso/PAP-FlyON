@@ -1,0 +1,73 @@
+<div class="div1">
+     <img class="logo" src="/PAPLogo.png">
+</div>
+<div class="contentor">
+    <table class="table table-striped table-light">
+        <tr>
+            <th>Id Proposta</th>
+            <th>Id Processo</th>
+            <th>Preço Voo</th>
+            <th>Tempo Viagem</th>
+            <th>Hotel</th>
+            <th>Preço Hotel</th>
+            <th>Morada</th>
+            <th>Dist Hotel</th>
+            <th>Preço Total</th>
+            <th>Data Limite Reserva Voo</th>
+        </tr>
+        {{#each data}}
+            <tr>
+                <td>
+                    {{id}}
+                </td>
+                <td>
+                    <a href="/flyon/processo/{{idprocesso}}">{{idprocesso}}</a>
+                </td>
+                <td>
+                    {{precovoo}}€
+                </td>
+                <td>
+                    {{tempoviagem}}
+                </td>
+                <td>
+                    {{nomehotel}}
+                </td>
+                <td>
+                    {{precohotel}}€
+                </td>
+                <td>
+                    {{morada}}
+                </td>
+                <td>
+                    {{disthotel}}
+                </td>
+                <td>
+                    {{precototal}}€
+                </td>
+                <td>
+                    {{datalimitereservavoo}}
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+
+    <a href="/flyon/proposta/{{data.0.id}}/infovoo" class="btn botoes">InfoVoos da Proposta {{data.0.id}}</a>
+    <a href="/flyon/proposta" class="btn botoes">Voltar para Propostas</a>
+    <a href="/flyon/" class="btn botoes">Voltar para Menu</a>
+    <a href="/flyon/proposta/{{data.0.id}}/delete" class="btn botoes" id="apagar">Apagar Proposta</a>
+</div>
+<style>
+    .botoes
+    {
+        width: 800px;
+        height: 70px;
+        font-size: 50px;
+        line-height: 100%;
+        font-weight: 500;
+    }
+
+    #apagar
+    {
+        background-color: red !important;
+    }
+</style>
