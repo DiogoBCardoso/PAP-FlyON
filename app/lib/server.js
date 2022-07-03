@@ -14,7 +14,7 @@ function init(done) {
     const app = express()
 
     app.set('view engine', 'hbs')
-    app.set('views', './lib/views')
+    app.set('views', path.join(__dirname, 'views'))
 
     //-----------------Configuaração Rotas---------------------------- 
     app.use(cors());
